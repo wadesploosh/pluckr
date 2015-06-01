@@ -1,0 +1,552 @@
+/*! HTML5 Boilerplate v5.0 | MIT License | http://h5bp.com/ */
+
+html {
+    color: #333;
+    font-size: 1em;
+    line-height: 1.4;
+}
+
+::-moz-selection {
+    background: #b3d4fc;
+    text-shadow: none;
+}
+
+::selection {
+    background: #b3d4fc;
+    text-shadow: none;
+}
+
+
+/* ===== Initializr Styles ==================================================
+   Author: Jonathan Verrecchia - verekia.com/initializr/responsive-template
+   ========================================================================== */
+
+body {
+    font: 16px/26px Helvetica, Helvetica Neue, Arial;
+}
+
+
+/* ==========================================================================
+   Author's custom styles
+   ========================================================================== */
+
+body {
+    background: #eee;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 300;
+    
+    h1 {
+        font-size: 1.3em;
+        margin: 0.5em 0;
+        font-weight: 300;
+    }
+    
+    h2 {
+        font-size: 1.2em;
+        line-height: 0.8em;
+        font-weight: 400;
+        margin: 0 0 0.6em 0;
+    }
+    
+    p {
+        font-size: 0.92em;
+        line-height: 1.3em;
+        margin: 1em 0;
+        color: #666;
+    }
+    
+    a, a:hover, a:active {
+        color: #2f7bbd;
+        text-decoration: none;
+        -o-transition:0.5s;
+        -ms-transition:0.5s;
+        -moz-transition:0.5s;
+        -webkit-transition:0.5s;
+        transition:0.5s; 
+    }
+    
+    a:hover {
+        color: #f36;
+    }
+    
+    a, input {
+        -webkit-appearance: none !important;
+    }
+    
+    
+    /* To set it to none use a totally transparent RGBA */
+    html { -webkit-tap-highlight-color: rgba(0,0,0,0) !important; }
+    
+    
+    .header-container {
+        width: 100%;
+        background: #252b33;
+        position: fixed;
+        z-index: 3;
+    
+        .title {
+            color: white;
+            display: block;
+            text-align: center;
+        }
+    
+         .back-btn {
+            width: 45px;
+            height: 45px;
+            margin: -23px 0 0 0;
+            display: none;
+            text-indent: -9999px;
+            background: url(../img/icon-back-arrow.svg) no-repeat 0 0;
+            background-size: 45px 45px;
+            position: absolute;
+            top: 50%;
+            left: 0;
+            z-index: 2;
+            cursor: pointer;
+            
+            &:active {
+                opacity: 0.5;
+            }
+        }
+    }
+    
+    .main-container {
+        padding: 65px 0 20px 0;
+    
+        .decision-container {
+            width: 90%; 
+            height: 365px; 
+            margin: -160px 5% 0 5%;
+            position: absolute; 
+            top: 50%; 
+            left: 0; 
+            z-index: 2;
+            -o-transition:0.75s;
+            -ms-transition:0.75s;
+            -moz-transition:0.75s;
+            -webkit-transition:0.75s;
+            transition:0.75s;
+            
+            .white-container {
+                width: 100%; 
+                height: 175px; 
+                margin: 0 auto 20px;
+                padding: 30px 20px 0; 
+                box-sizing: border-box; 
+                text-align: center; 
+                background: #fff; 
+                border-radius: 5px 5px; 
+                border: 1px solid #ddd; 
+                box-shadow: 0 1px 2px rgba(0,0,0,0.06); 
+                -o-transition:.2s;
+                -ms-transition:.2s;
+                -moz-transition:.2s;
+                -webkit-transition:.2s;
+                transition:.2s;
+                
+                &:active {
+                    background: #f6f6f6;
+                    box-shadow: 0 0 0 rgba(0,0,0,0);
+                }
+        
+                h2 {
+                    color: #fc3768;
+                }
+        
+                .showing p {
+                    margin: 0;
+                    color: #999;
+                }
+                
+                .main-icon {
+                    width: 135px; 
+                    height: 80px;
+                    margin: 0 auto 1.2em auto;
+                    background-position: 0 0;
+                    background-repeat: no-repeat;
+                    -o-transition:0.75s,background-position 1ms linear;
+                    -ms-transition:0.75s,background-position 1ms linear;
+                    -moz-transition:0.75s,background-position 1ms linear;
+                    -webkit-transition:0.75s,background-position 1ms linear;
+                    transition:0.75s,background-position 1ms linear;
+                }
+                
+                &.userTweetsOption {
+                    margin-bottom: 15px;
+                    cursor: pointer;
+                    
+                    .user-search-icon {
+                        background-image: url(../img/icon-user-search.svg);
+                        background-size: 135px 160px;
+                    }
+    
+                    .searchedName {
+                        display: block;
+                        
+                        p {
+                            margin: 0;
+                            padding: 0 35px 0 20px;
+                            font-size: 1.2em;
+                            line-height: 1.2em;
+                            font-weight: 400;
+                            color: #333;
+                            display: inline-block;
+                            position: relative;
+    
+                            &.twitter-handle {
+                                margin: 0 0 1em 0;
+                                font-size: 0.8em;
+                                color: #999;
+                                display: block;
+                            }
+                        }
+    
+                        .verified {
+                            width: 15px;
+                            height: 15px;
+                            margin: -8px 0 0 0;
+                            border-radius: 50% 50%;
+                            background: #fc3768 url(../img/icon-tick.svg) no-repeat 0 0;
+                            background-size: 15px 15px;
+                            position: absolute;
+                            top: 50%;
+                            right: 15px;
+                            z-index: 2;
+                            display: none;
+                        }
+                    }
+                        
+                    #tweetlist {
+                        ul { 
+                            li {
+                                .tweet-text {
+                                    margin: 0;
+                                }
+                                .timestamp {
+                                    margin: 0.5em 0 0 0;
+                                    font-size: 0.8em;
+                                    color: #999;
+                                }
+                            }
+                        }
+                    }
+                }
+    
+                &.hashtagOption {
+                    cursor: pointer;
+                    
+                    .hashtag-search-icon {
+                        background-image: url(../img/icon-hashtag-search.svg);
+                        background-size: 135px 160px;
+                    }
+                    
+                    #hashtags {
+                        ul {
+                            li {
+                                &:last-child {
+                                    padding-bottom: 0;
+                                }
+                                img {
+                                    margin-bottom: 15px;
+                                    float: left;
+                                }
+                                .tweet-text {
+                                    margin: 0;
+                                    padding-left: 60px;
+                                }
+                                .twitter-handle {
+                                    margin: 0.5em 0 0 0;
+                                    font-size: 0.8em;
+                                    color: #999;
+                                    padding-left: 60px;
+                                }
+                                .profile-pic {
+                                    border-radius: 5px 5px;
+                                }
+                            }
+                        }
+                    }
+                }
+                
+                .searchMode {
+                    display: none;
+                }
+                
+                ul {
+                    margin: 0;
+                    padding: 0;
+                    list-style: none;
+    
+                    li {
+                        margin: 0;
+                        padding: 15px 15px;
+                        border-top: 1px solid #ddd;
+                        clear: both;
+                        text-align: left;
+                    }
+                }
+                
+                input {
+                    margin: 0 0 1em 0;
+                    padding: 6px 10px;
+                    background: #fff;
+                    content: #333;
+                    border-radius: 5px 5px;
+                    border: 1px solid #ccc;
+                    box-sizing: border-box; 
+
+                    &#twittername,
+                    &#hashtag {
+                        width: 70%;
+                        margin-right: 5%;
+                        float: left
+                    }
+
+                    &#countamount,
+                    &#countamountHashtag {
+                        width: 25%;
+                        float: left;
+                    }
+                }
+
+                #userSearch,
+                #hashtagSearch {
+                    width: 100%;
+                    padding: 10px 0;
+                    background: #fc3768;
+                    color: #fff;
+                    text-transform: uppercase;
+                    font-size: 1em;
+                    font-weight: 400;
+                    border-radius: 5px 5px;
+                    border: none;
+                    clear: both;
+                    outline: none !important;
+            
+                    &:active {
+                        background: #e5235b;
+                    }
+                }
+                
+                .profile-banner img {
+                    width: 100%;
+                }
+
+                .user-info-wrapper {
+                    display: none;
+                    &.active {
+                        margin-top: 1em;
+                        border: 1px solid #ddd; 
+                        border-radius: 5px 5px; 
+                        overflow: hidden;
+                        display: block;
+                        background: url(../img/loader.gif) no-repeat center 5px;
+                    }
+                }
+                
+                .profile-image {    
+                    margin-top: -25px;
+                    overflow: hidden;
+                    border-radius: 5px 5px;
+                }
+                
+                .less-toggle,
+                .more-toggle {
+                    display: none;
+                    cursor: pointer;
+                    
+                    p {
+                        margin-top: 0;
+                        font-size: 0.8em;
+                        color: #2f7bbd;
+                    }
+                }
+                
+                .more-info {
+                    display: none;
+                    padding: 0 15px;
+                }
+                
+                .errorField.active {
+                    padding: 10px 0;
+                    color: #ff0000;
+                }
+            }
+            
+            &.onStandby {
+                height: auto;
+                min-height: 264px;
+                margin-top: 0;
+                top: 65px;
+    
+                &.isActive {
+                    height: auto;
+                    margin-top: 0;
+                    position: static;
+                    left: auto;
+                    top: 65px;
+                }
+    
+                .white-container {
+                    height: auto;
+                    min-height: 264px; 
+                    margin-bottom: 0;
+                    padding: 20px;
+                    cursor: auto;
+    
+                    &:active {
+                        background: #fff;
+                    }
+    
+                    .main-icon {
+                        width: 81px;
+                        height: 48px;
+                        background-size: 81px 96px;
+                    }
+                    
+                    .searchMode { 
+                        display: block; 
+                        .constrainer {
+                            max-width: 380px; 
+                            margin: 0 auto;
+                        }
+                    }
+                }
+            }
+            
+            &.hasSearched {    
+                .white-container { 
+                    .profile-banner {
+                        border-radius: 4px 4px 0 0;
+                        overflow: hidden;
+                    }
+
+                    .profile-image {
+                        display: inline-block;
+                    }
+
+                    .more-toggle {
+                        display: block;
+                    }
+
+                    .more-info.active {
+                        display: block;
+                    }
+
+                    .showing p {
+                        margin: 2em 0 1em 0;
+                    }
+                }
+            }
+        }
+    }
+}
+
+/* ==========================================================================
+   Media Queries
+   ========================================================================== */
+
+@media only screen and (min-width: 35.5em) {
+    body {         
+        .main-container {
+            .decision-container {
+                width: 60%; 
+                margin: -160px 20% 0 20%;
+            }
+        }
+    }
+}
+
+@media only screen and (min-width: 48em) {
+    body {        
+        .main-container {
+            .decision-container {
+                width: 50%;
+                margin: -160px 25% 0 25%;
+                
+                .white-container { 
+                    #userSearch,
+                    #hashtagSearch {
+                        width: 24%;
+                        display: inline-block;
+                        padding: 5px;
+                    }
+                    
+                    input {
+                        &#countamount, 
+                        &#countamountHashtag {
+                            width: 17%;
+                            margin-right: 4%;
+                        }
+                        &#twittername, 
+                        &#hashtag {
+                            margin-right: 4%;
+                            width: 50%;
+                        }
+                    }
+                }
+                &.onStandby .white-container {
+                    min-height: 234px;
+                }
+                &.hasSearched .white-container .showing {
+                    clear: both; 
+                }
+            }
+        }
+    }
+}
+
+
+
+@media only screen and (min-width: 64em) {
+    body {  
+        h1 {
+            font-size: 1.5em;
+        }
+        h2 {
+            font-size: 1.6em;
+        }
+        p {
+            font-size: 1em;
+        }
+        .main-container {
+            padding-top: 85px;
+            .decision-container {
+                height: 470px;
+                width: 40%;
+                margin: -206px 30% 0 30%;
+                &.onStandby {
+                    top: 85px;
+                    .white-container {
+                        padding: 30px;
+                    }
+                }
+                .white-container {
+                    height: 225px;
+                    padding-top: 45px;
+                    .main-icon {
+                        margin-bottom: 1.6em;
+                    }
+                    &.userTweetsOption .searchedName p {
+                        font-size: 1.6em;    
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+.clearfix:before,
+.clearfix:after {
+    content: " ";
+    display: table;
+}
+
+.clearfix:after {
+    clear: both;
+}
+
+.clearfix {
+    *zoom: 1;
+}
